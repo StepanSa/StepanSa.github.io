@@ -1,0 +1,110 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 20px;
+}
+
+.admin {
+  border-left: 5px solid #007bff;
+}
+
+.user-avatar {
+  background-color: #ccc;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  margin-right: 20px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.user-info {
+  display: inline-block;
+  vertical-align: middle;
+  width: calc(100% - 80px);
+}
+
+h3 {
+  margin-top: 0;
+}
+
+.info-toggle {
+  display: none;
+}
+
+.user-details {
+  display: none;
+  margin-top: 10px;
+}
+
+.info-toggle:checked ~ .user-details {
+  display: block;
+}
+
+.user-details p {
+  margin: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 767px) {
+  .user-avatar {
+    display: none;
+  }
+  .user-info {
+    display: block;
+    width: 100%;
+  }
+  .view-info {
+    margin-top: 10px;
+  }
+}
+.edit-user,
+.view-info,
+.delete-user {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 12px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+.edit-user:hover,
+.view-info:hover,
+.delete-user:hover {
+  background-color: #0069d9;
+}
+
+.delete-user {
+  background-color: #dc3545;
+}
+.delete-user:hover {
+  background-color: #c82333;
+}

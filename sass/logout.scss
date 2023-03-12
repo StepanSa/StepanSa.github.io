@@ -1,0 +1,74 @@
+// Global styles
+$primary-color: #007bff;
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+a {
+    color: $primary-color;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+header {
+    background-color: $primary-color;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    nav {
+        display: flex;
+        align-items: center;
+
+        a {
+            margin-right: 1rem;
+        }
+    }
+
+    .user-section {
+        display: flex;
+        align-items: center;
+
+        span {
+            margin-right: 1rem;
+        }
+
+        a {
+            color: white;
+            border: 1px solid white;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+
+            &:hover {
+                background-color: white;
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+}
