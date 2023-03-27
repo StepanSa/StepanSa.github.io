@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Service</title>
+    <link rel="stylesheet" href="../../css/ticket1.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">Ticvice</div>
+        <nav>
+            <div class="header-links">
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../gallery.html">Gallery</a></li>
+                    <li><a href="../events.html">Events</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <nav class="nav-login">
+            <ul>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <main class="main">
+        <h1>Checkout</h1>
+
+        <div class="tickets">
+            <h2>Select Number and Type of Tickets</h2>
+            <form>
+                <div class="form-group">
+                    <label for="num-tickets">Number of Tickets:</label>
+                    <input type="number" id="num-tickets" name="num-tickets" min="1" max="10" required>
+                </div>
+                <div class="form-group">
+                    <label for="ticket-type">Ticket Type:</label>
+                    <select id="ticket-type" name="ticket-type" required>
+                        <option value="">--Select Ticket Type--</option>
+                        <option value="general-admission">General Admission</option>
+                        <option value="vip">VIP</option>
+                        <option value="premium">Premium</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+
+        <div class="personal-info">
+            <h2>Personal Information</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+            </form>
+        </div>
+
+        <div class="billing-info">
+            <h2>Billing Information</h2>
+            <form>
+                <div class="form-group">
+                    <label for="cc-num">Credit Card Number:</label>
+                    <input type="text" id="cc-num" name="cc-num" required>
+                </div>
+                <div class="form-group">
+                    <label for="billing-address">Billing Address:</label>
+                    <textarea id="billing-address" name="billing-address" required></textarea>
+                </div>
+            </form>
+        </div>
+
+        <div class="checkout-button">
+            <button type="submit">Checkout</button>
+        </div>
+
+    </main>
+
+</body>
+
+</html>
