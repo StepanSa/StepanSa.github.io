@@ -19,26 +19,22 @@ body {
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
-form {
+.container form {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
-h2 {
+.container form h2 {
   margin-bottom: 30px;
   color: #007bff;
 }
-
-label {
+.container form label {
   display: block;
   margin-bottom: 10px;
   font-weight: bold;
 }
-
-input[type=text],
-input[type=password] {
+.container form input[type=text],
+.container form input[type=password] {
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;
@@ -46,8 +42,7 @@ input[type=password] {
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
-
-button[type=submit] {
+.container form button[type=submit] {
   background-color: #007bff;
   color: #fff;
   padding: 10px 20px;
@@ -56,7 +51,17 @@ button[type=submit] {
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
 }
-
-button[type=submit]:hover {
+.container form button[type=submit]:hover {
   background-color: #0062cc;
+}
+.container form p {
+  text-align: center;
+  margin-top: 20px;
+}
+.container form p a {
+  color: #007bff;
+  text-decoration: none;
+}
+.container form p a:hover {
+  text-decoration: underline;
 }

@@ -1,0 +1,22 @@
+{
+  "name": "ticket-service",
+  "version": "1.0.0",
+  "description": "Service for buying and booking tickets for concerts, events etc",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StepanSa/StepanSa.github.io.git"
+  },
+  "author": "Stepan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StepanSa/StepanSa.github.io/issues"
+  },
+  "homepage": "https://github.com/StepanSa/StepanSa.github.io#readme",
+  "dependencies": {
+    "jwt-decode": "^3.1.2"
+  }
+}
