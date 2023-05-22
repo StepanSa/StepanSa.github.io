@@ -6,18 +6,7 @@ import Home from './Pages/home';
 import Login from './Pages/login';
 import Profile from './Pages/profile';
 import SignUp from './Pages/signup';
-// import Footer from "./Components/Footer"
-// import Contact from "./Pages/Contact"
-// import Dialog from "./Pages/Dialog"
-// import Home from "./Pages/Home"
-// import Login from "./Pages/Login"
-// import Update from "./Pages/Update"
-// import Logout from "./Pages/Logout"
-// import Wallet from "./Pages/myWallet"
-// import SendingMoney from "./Pages/sendingMoney"
-// import PrivateRoute from "./Pages/PrivateRoute"
-// import ResetPassword from "./Pages/ResetPassword"
-// import Profile from "./Pages/Profile"
+
 
 function App() {
   return (
