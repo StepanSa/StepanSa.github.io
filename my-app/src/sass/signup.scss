@@ -1,0 +1,86 @@
+.user-dialog {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    width: 30rem;
+    max-width: 100%;
+    margin: 0 auto;
+
+    h1 {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1rem;
+
+            label {
+                font-size: 1.2rem;
+                font-weight: bold;
+                margin-bottom: 0.5rem;
+            }
+
+            input,
+            select {
+                padding: 0.5rem;
+                border: 2px solid #ccc;
+                border-radius: 0.5rem;
+                font-size: 1rem;
+                font-family: inherit;
+                color: #333;
+
+                &:focus {
+                    outline: none;
+                    border-color: #4caf50;
+                }
+            }
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+
+            .btn-ok,
+            .btn-cancel {
+                padding: 0.5rem 1.5rem;
+                border: none;
+                border-radius: 0.5rem;
+                font-size: 1rem;
+                font-weight: bold;
+                cursor: pointer;
+                text-decoration: none;
+                display: inline-block;
+                text-align: center;
+                transition: background-color 0.2s ease-in-out;
+            }
+
+            .btn-ok {
+                background-color: #4caf50;
+                color: #fff;
+
+                &:hover {
+                    background-color: #388e3c;
+                }
+            }
+
+            .btn-cancel {
+                background-color: #e0e0e0;
+                color: #333;
+
+                &:hover {
+                    background-color: #bdbdbd;
+                }
+            }
+        }
+    }
+}
