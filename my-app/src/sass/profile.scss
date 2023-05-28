@@ -51,6 +51,16 @@ main {
         p {
             margin: 0;
         }
+
+        a {
+            color: $primary-color;
+            text-decoration: none;
+            transition: all 0.3s ease;
+
+            &:hover {
+                color: darken($primary-color, 10%);
+            }
+        }
     }
 
     .button-container {
