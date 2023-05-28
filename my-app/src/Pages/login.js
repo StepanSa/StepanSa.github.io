@@ -24,7 +24,7 @@ class Login extends Component {
         })
             .then((res) => {
                 if (!res.ok) {
-                    throw new Error("Network response was not ok");
+                    throw new Error("Username or password are incorrect");
                 }
                 return res.json();
             })

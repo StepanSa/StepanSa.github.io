@@ -45,6 +45,14 @@ main {
 .profile-container .profile-item p {
   margin: 0;
 }
+.profile-container .profile-item a {
+  color: #007bff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.profile-container .profile-item a:hover {
+  color: #0062cc;
+}
 .profile-container .button-container {
   display: flex;
   justify-content: flex-end;

@@ -117,6 +117,9 @@ class Profile extends Component {
                             <button class="update-button" onClick={this.handleLogOut}>Log Out</button>
                             <button class="delete-button" onClick={this.handleDelete}>Delete</button>
                         </div>
+                        <div class="profile-item">
+                            <p><Link to="/mytickets">My tickets</Link></p>
+                        </div>
                     </div>
                 </main>
             </div>
