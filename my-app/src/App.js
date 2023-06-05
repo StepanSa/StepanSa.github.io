@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import './App.css';
-import "./sass/header.scss";
+import React, { Component } from 'react';
+// import './App.css';
+// import "./sass/header.scss";
 import Header from "./Components/header"
 import Home from './Pages/home';
 import Login from './Pages/login';
@@ -22,7 +23,6 @@ function App() {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/events" element={<EventsPage />} />
           <Route path="/mytickets" element={<MyTicketsPage />} />
-          {/* <Route path="/profile" element={<Profile isLoggedIn={isLoggedIn} />} /> */}
         </Routes>
       </Router>
     </>
