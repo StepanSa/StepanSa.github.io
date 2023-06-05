@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../sass/login.scss";
+// import "../sass/login.scss";
 
 class Login extends Component {
     constructor(props) {
@@ -12,46 +12,46 @@ class Login extends Component {
         };
     }
 
-    performLogin = () => {
-        const { username, password } = this.state;
+    // performLogin = () => {
+    //     const { username, password } = this.state;
 
-        fetch("http://127.0.0.1:5000/login", {
-            method: "GET",
-            headers: {
-                "Content-Type": "application/json",
-                Authorization: "Basic " + btoa(username + ":" + password),
-            },
-        })
-            .then((res) => {
-                if (!res.ok) {
-                    throw new Error("Username or password are incorrect");
-                }
-                return res.json();
-            })
-            .then((data) => {
-                localStorage.setItem("token", data.token);
-                window.location.href = "./";
-            })
-            .catch((error) => {
-                this.setState({ error: error.message });
-            });
-    };
+    //     fetch("http://127.0.0.1:5000/login", {
+    //         method: "GET",
+    //         headers: {
+    //             "Content-Type": "application/json",
+    //             Authorization: "Basic " + btoa(username + ":" + password),
+    //         },
+    //     })
+    //         .then((res) => {
+    //             if (!res.ok) {
+    //                 throw new Error("Username or password are incorrect");
+    //             }
+    //             return res.json();
+    //         })
+    //         .then((data) => {
+    //             localStorage.setItem("token", data.token);
+    //             window.location.href = "./";
+    //         })
+    //         .catch((error) => {
+    //             this.setState({ error: error.message });
+    //         });
+    // };
 
-    handleInputChange = (e) => {
-        this.setState({ [e.target.name]: e.target.value });
-    };
+    // handleInputChange = (e) => {
+    //     this.setState({ [e.target.name]: e.target.value });
+    // };
 
-    handleSubmit = (e) => {
-        e.preventDefault();
-        this.performLogin();
-    };
+    // handleSubmit = (e) => {
+    //     e.preventDefault();
+    //     this.performLogin();
+    // };
 
     render() {
-        const { username, password, error } = this.state;
+        // const { username, password, error } = this.state;
 
         return (
-            <div className="container">
-                <form onSubmit={this.handleSubmit}>
+            <div className="container" data-testid="login-container">
+                {/* <form onSubmit={this.handleSubmit}>
                     <h2>Login</h2>
                     <label htmlFor="username">Username</label>
                     <input
@@ -78,7 +78,7 @@ class Login extends Component {
                     <p>
                         Not registered? <a href="./signup">Sign up here</a>
                     </p>
-                </form>
+                </form> */}
             </div>
         );
     }
