@@ -9,6 +9,8 @@ import Profile from './Pages/profile';
 import SignUp from './Pages/signup';
 import EventsPage from './Pages/events';
 import MyTicketsPage from "./Pages/mytickets";
+import Contact from "./Pages/contact";
+import Gallery from "./Pages/gallery";
 
 
 function App() {
@@ -23,6 +25,8 @@ function App() {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/events" element={<EventsPage />} />
           <Route path="/mytickets" element={<MyTicketsPage />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/gallery" element={<Gallery />} />
         </Routes>
       </Router>
     </>
