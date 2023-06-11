@@ -13,12 +13,6 @@ function Home() {
                         <p>Register your account</p>
                     </a>
                 </div>
-                {/* <div class="block-link">
-                    <a href="/users">
-                        <h2>Users</h2>
-                        <p>View all registered users</p>
-                    </a>
-                </div> */}
             </div>
         </main>
 
