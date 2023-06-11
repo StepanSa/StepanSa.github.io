@@ -1,55 +1,55 @@
 import React, { useState } from 'react';
-import '../sass/signup.scss';
+// import '../sass/signup.scss';
 
 function SignUp() {
-    const [error, setError] = useState(null);
+    // const [error, setError] = useState(null);
 
-    const handleFormSubmit = async (event) => {
-        event.preventDefault();
-        const isAdmin = event.target.elements.isAdmin.value;
+    // const handleFormSubmit = async (event) => {
+    //     event.preventDefault();
+    //     const isAdmin = event.target.elements.isAdmin.value;
 
-        if (isAdmin === '1') {
-            alert('You do not have rights to create an admin.');
-        } else {
-            const formData = new FormData(event.target);
-            const data = Object.fromEntries(formData);
+    //     if (isAdmin === '1') {
+    //         alert('You do not have rights to create an admin.');
+    //     } else {
+    //         const formData = new FormData(event.target);
+    //         const data = Object.fromEntries(formData);
 
-            if (data.password !== data.confirmPassword) {
-                setError('Passwords do not match');
-            } else {
-                delete data.confirmPassword;
+    //         if (data.password !== data.confirmPassword) {
+    //             setError('Passwords do not match');
+    //         } else {
+    //             delete data.confirmPassword;
 
-                const options = {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(data),
-                };
+    //             const options = {
+    //                 method: 'POST',
+    //                 headers: {
+    //                     'Content-Type': 'application/json',
+    //                 },
+    //                 body: JSON.stringify(data),
+    //             };
 
-                try {
-                    const response = await fetch('http://127.0.0.1:5000/user', options);
-                    const json = await response.json();
-                    if (json.code !== 200) {
-                        if (json.error.slice(2, 11) === 'birthDate') {
-                            setError('Birth date should be entered earlier than the current date');
-                        } else {
-                            setError(json.error);
-                        }
-                    } else {
-                        alert('User successfully created');
-                        // Redirect to profile page or perform any other necessary action
-                    }
-                } catch (error) {
-                    setError('An error occurred while creating the user');
-                }
-            }
-        }
-    };
+    //             try {
+    //                 const response = await fetch('http://127.0.0.1:5000/user', options);
+    //                 const json = await response.json();
+    //                 if (json.code !== 200) {
+    //                     if (json.error.slice(2, 11) === 'birthDate') {
+    //                         setError('Birth date should be entered earlier than the current date');
+    //                     } else {
+    //                         setError(json.error);
+    //                     }
+    //                 } else {
+    //                     alert('User successfully created');
+    //                     // Redirect to profile page or perform any other necessary action
+    //                 }
+    //             } catch (error) {
+    //                 setError('An error occurred while creating the user');
+    //             }
+    //         }
+    //     }
+    // };
 
     return (
-        <div className="user-dialog">
-            <h1>Sign up</h1>
+        <div className="user-dialog" data-testid="user-dialog">
+            {/* <h1>Sign up</h1>
             {error && <p className="error-message">{error}</p>}
             <form id="create-user-form" onSubmit={handleFormSubmit}>
                 <div class="form-group">
@@ -104,7 +104,7 @@ function SignUp() {
                         Cancel
                     </a>
                 </div>
-            </form>
+            </form> */}
         </div>
     );
 }

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import '../sass/profile.scss';
+// import '../sass/profile.scss';
 import { Link } from "react-router-dom";
 import { withRouter } from "react-router-dom";
-import axios from 'axios';
+// import axios from 'axios';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 class Profile extends Component {
@@ -14,79 +14,79 @@ class Profile extends Component {
         };
     }
 
-    componentDidMount() {
-        this.handleGetMyInfo();
-    }
+    // componentDidMount() {
+    //     this.handleGetMyInfo();
+    // }
 
-    handleGetMyInfo = async () => {
-        const token = localStorage.getItem('token');
-        console.log(token);
-        const url = 'http://127.0.0.1:5000/user/self';
-        const config = {
-            headers: {
-                'Access-Control-Allow-Origin': '*',
-                'Content-Type': 'application/json',
-                Authorization: 'Bearer ' + token
-            },
-        };
+    // handleGetMyInfo = async () => {
+    //     const token = localStorage.getItem('token');
+    //     console.log(token);
+    //     const url = 'http://127.0.0.1:5000/user/self';
+    //     const config = {
+    //         headers: {
+    //             'Access-Control-Allow-Origin': '*',
+    //             'Content-Type': 'application/json',
+    //             Authorization: 'Bearer ' + token
+    //         },
+    //     };
 
-        try {
-            const response = await axios.get(
-                url,
-                config
-            );
-            this.setState({ accountData: response.data });
-        } catch (error) {
-            console.log(error);
-        }
-    };
+    //     try {
+    //         const response = await axios.get(
+    //             url,
+    //             config
+    //         );
+    //         this.setState({ accountData: response.data });
+    //     } catch (error) {
+    //         console.log(error);
+    //     }
+    // };
 
-    handleLogOut = event => {
-        event.preventDefault();
-        sessionStorage.removeItem('Authorization');
-        localStorage.removeItem('Authorization');
-        localStorage.removeItem('token');
-        //this.props.history.push('/');
-    }
+    // handleLogOut = event => {
+    //     event.preventDefault();
+    //     sessionStorage.removeItem('Authorization');
+    //     localStorage.removeItem('Authorization');
+    //     localStorage.removeItem('token');
+    //     //this.props.history.push('/');
+    // }
 
-    handleDelete = async event => {
-        event.preventDefault();
-        this.setState({ modal: !this.state.modal });
-        const token = localStorage.getItem('token');
-        const url = 'http://127.0.0.1:5000/user/self';
-        const config = {
-            headers: {
-                'Access-Control-Allow-Origin': '*',
-                'Content-Type': 'application/json',
-                Authorization: 'Bearer ' + token
-            },
-        };
+    // handleDelete = async event => {
+    //     event.preventDefault();
+    //     this.setState({ modal: !this.state.modal });
+    //     const token = localStorage.getItem('token');
+    //     const url = 'http://127.0.0.1:5000/user/self';
+    //     const config = {
+    //         headers: {
+    //             'Access-Control-Allow-Origin': '*',
+    //             'Content-Type': 'application/json',
+    //             Authorization: 'Bearer ' + token
+    //         },
+    //     };
 
-        try {
-            const response = await axios.delete(url, config);
-            sessionStorage.removeItem('Authorization');
-            localStorage.removeItem('Authorization');
-            localStorage.removeItem('token');
-            //this.props.history.push('/');
-            alert('Your account was successfully deleted');
-        } catch (error) {
-            console.log(error);
-        }
-    }
+    //     try {
+    //         const response = await axios.delete(url, config);
+    //         sessionStorage.removeItem('Authorization');
+    //         localStorage.removeItem('Authorization');
+    //         localStorage.removeItem('token');
+    //         //this.props.history.push('/');
+    //         alert('Your account was successfully deleted');
+    //     } catch (error) {
+    //         console.log(error);
+    //     }
+    // }
 
-    toggle = () => {
-        this.setState({ modal: !this.state.modal });
-    }
+    // toggle = () => {
+    //     this.setState({ modal: !this.state.modal });
+    // }
 
     render() {
-        const { accountData } = this.state;
+        // const { accountData } = this.state;
 
         return (
-            <div class="container">
+            <div class="container" data-testid="profile">
                 <header>
                     <h1>My Profile</h1>
                 </header>
-                <main>
+                {/* <main>
                     <div class="profile-container">
                         <div class="profile-item">
                             <label>Username:</label>
@@ -121,7 +121,7 @@ class Profile extends Component {
                             <p><Link to="/mytickets">My tickets</Link></p>
                         </div>
                     </div>
-                </main>
+                </main> */}
             </div>
         );
     }
